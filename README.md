@@ -1,5 +1,12 @@
 # API Data Collection Pipeline
 
+## Overview
+
+A staged ingest exercise for API monitoring data. It takes JSON records that were already fetched, with no live HTTP calls, validates them, and summarizes `latency_ms` by `endpoint`; records with missing numbers are skipped. A `/v1` ops API adds workspaces, tenant isolation, job approval and audit records, and tests cover both the analysis and the ops API.
+
+- **Built with:** Python, pytest, Docker, Docker Compose, GitHub Actions
+- **Scope:** Python and data lab with tests; it does not call live APIs and refuses production apply.
+
 <!-- project-guide:start -->
 ## Project guide
 
